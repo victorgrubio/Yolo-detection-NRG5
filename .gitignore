@@ -1,0 +1,36 @@
+
+#Logs
+**/*.log
+**/*.log.*
+
+#Build files
+**/*.pyc
+__pycache__
+*.swp
+screenlog*
+build/*
+.eggs/*
+
+#IDE folders
+.vscode/*
+.spyproject/*
+.project
+.pydevproject
+.settings/*
+
+#Video files
+www/videos/*.ts
+www/videos/*.m3u8
+videos/*
+!videos/.gitkeep
+*.avi
+samples/
+!samples/.gitkeep
+**/**.mp4
+#Images
+**/*.jpg
+
+#External modules
+/smart_meter.db
+/pmu.db
+vmme_client/*

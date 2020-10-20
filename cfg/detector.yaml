@@ -1,0 +1,70 @@
+args:
+    video_path: null
+    droneid: null
+    display: false
+    xml: false
+    save_video_orig: false
+    save_video: false
+    disable_alerts: false
+    camera: 'thermal'
+    broadcast: false
+    local_emission: false
+    mode: null
+    send_subplan: true
+
+drone:
+    stream_port: 8099
+    subplan_time_space: 30
+
+video:
+    stream_ip: 'localhost'
+    max_width: 1280
+    record_fps: 20
+    resized_width: 1280
+    resized_height: 720
+
+thermal:
+    input_fps_rate: 30
+    stream_fps_rate: 30
+    queue_size: 10
+  
+visual:
+    input_fps_rate: 20
+    stream_fps_rate: 20
+    queue_size: 10
+    min_score: 30
+    model: large_yolo
+    categories: person
+        - car
+        - motorbike
+        - truck 
+        - bus
+
+broadcast:
+    host: 127.0.0.1
+    port: 5000
+
+hls:
+    fps: 10
+    min_rate: 3
+    max_rate: 3.5
+    buffer_rate: 1.5
+    hls_time: 4
+    num_ts: 4
+    threads: 4
+    stream_address: 'www/videos/index.m3u8'
+
+tiny_yolo:
+    cfg: '/cfg/yolov3-tiny.cfg'
+    weights: '/weights/yolov3-tiny.weights'
+    data: '/cfg/coco.data'
+
+large_yolo:
+    cfg: '/cfg/yolov3.cfg'
+    weights: '/weights/yolov3.weights'
+    data: '/cfg/coco.data'
+
+custom_yolo:
+    cfg: '/cfg/voc_custom_detector.cfg'
+    weights: '/weights/custom_detector_10_10.weights'
+    data: '/cfg/voc_custom_detector.data'

@@ -1,0 +1,7 @@
+[submodule "ndmws"]
+	path = ndmws
+	url = http://gitlab.com/chabaena/ndmws
+[submodule "ndmws_visiona"]
+	path = ndmws_visiona
+	url = git@gitlab.com:jlalueza/ndmws_visiona.git
+	branch = master
